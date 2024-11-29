@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
+import { TChildren } from '@/types'
 import localFont from 'next/font/local'
 import '@/assets/globals.css'
-import { TChildren } from '@/types'
 
 const satoshi = localFont({
 	src: '../assets/fonts/satoshi.woff2',
