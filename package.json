@@ -2,23 +2,23 @@
 	"name": "simplesphere",
 	"version": "0.1.0",
 	"private": true,
-  "engines": {
-    "npm": "never",
-    "yarn": ">=1.22.0",
-    "pnpm": ">=7.0.0"
-  },
+	"engines": {
+		"npm": "never",
+		"yarn": ">=1.22.0"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"prepare": "husky",
+		"postinstall": "husky",
 		"lint": "yarn lint:fix && yarn lint:check && yarn lint:typecheck",
 		"lint:check": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"lint:typecheck": "tsc --noEmit --pretty",
 		"prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
 		"prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-		"clean": "git clean -xdf .next node_modules"
+		"clean": "git clean -xdf .next node_modules",
+		"analyze": "ANALYZE=true yarn build"
 	},
 	"lint-staged": {
 		"src/**/*.{jsx,js,ts,tsx}": [
@@ -30,7 +30,9 @@
 		]
 	},
 	"dependencies": {
+		"@next/bundle-analyzer": "^15.0.3",
 		"next": "15.0.3",
+		"next-intl": "^3.25.3",
 		"react": "19.0.0-rc-66855b96-20241106",
 		"react-dom": "19.0.0-rc-66855b96-20241106"
 	},

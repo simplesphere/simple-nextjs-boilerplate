@@ -1,8 +1,12 @@
+import { useTranslations } from 'next-intl'
+
 export default function Home() {
+	const t = useTranslations('PAGES.HOMEPAGE')
+
 	return (
 		<section className="h-full py-12" id="intro">
 			<div className="container">
-				<h1 className="text-3xl mb-3 font-bold">NextJs Boilerplate (minimal)</h1>
+				<h1 className="text-3xl mb-3 font-bold">{t('TITLE')}</h1>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non odio nunc.
 					Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris hendrerit et quam at

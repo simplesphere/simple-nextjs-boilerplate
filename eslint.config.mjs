@@ -9,7 +9,7 @@ export default tseslint.config(
 	...tseslint.configs.recommended,
 	...tseslint.configs.stylistic,
 	{
-		ignores: ['**/node_modules/**', '.next/**', 'out/**'],
+		ignores: ['**/node_modules/**', '**/.next/', 'out/**'],
 	},
 	{
 		files: ['**/*.{js,mjs,cjs,ts,tsx}'],
@@ -38,6 +38,7 @@ export default tseslint.config(
 			'complexity': ['warn', 20],
 			'@next/next/no-html-link-for-pages': 'error',
 			'@typescript-eslint/consistent-type-definitions': 'off',
+			'@typescript-eslint/no-require-imports': 'off',
 		},
 	},
 	{

@@ -1,5 +1,9 @@
 import { ReactNode } from 'react'
 
 export type TChildren = {
-	children: ReactNode
+	readonly children: ReactNode
+}
+
+export type TLayoutLocale = TChildren & {
+	readonly params: { readonly locale: string }
 }

@@ -1,0 +1,8 @@
+{
+	"PAGES": {
+		"HOMEPAGE": {
+			"TITLE": "Simplesphere - Next.js Boilerplate",
+			"DESCRIPTION": "An easy to use, lightweight, and fast Next.js boilerplate with Tailwind CSS, TypeScript, Translations, ESLint, Prettier, and Husky."
+		}
+	}
+}
