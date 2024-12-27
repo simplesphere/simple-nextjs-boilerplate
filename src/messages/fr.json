@@ -1,5 +1,25 @@
 {
-	"HomePage": {
-		"title": "Salut!"
+	"PAGES": {
+		"HOMEPAGE": {
+			"TITLE": "Next.js Boilerplate",
+			"DESCRIPTION": "Un modèle Next.js facile à utiliser, léger et rapide avec Tailwind CSS, TypeScript, Traductions, ESLint, Prettier et Husky."
+		}
+	},
+	"COMPONENTS": {
+		"FORM": {
+			"LOGIN": {
+				"TITLE": "Connectez-vous à votre compte",
+				"LABEL_EMAIL": "Email",
+				"LABEL_PASSWORD": "Mot de passe",
+				"PLACEHOLDER_EMAIL": "Entrez votre email",
+				"PLACEHOLDER_PASSWORD": "Entrez votre mot de passe",
+				"BUTTON_LOGIN": "Se connecter",
+				"BUTTON_LOGGING_IN": "Connexion en cours…",
+				"FORGOT_PASSWORD": "Mot de passe oublié",
+				"ERROR_EMAIL": "Veuillez entrer un email valide",
+				"ERROR_PASSWORD": "Veuillez entrer un mot de passe valide",
+				"ERROR_LOGIN": "Email ou mot de passe invalide"
+			}
+		}
 	}
 }

@@ -1,8 +1,25 @@
 {
 	"PAGES": {
 		"HOMEPAGE": {
-			"TITLE": "Simplesphere - Next.js Boilerplate",
+			"TITLE": "Next.js Boilerplate",
 			"DESCRIPTION": "An easy to use, lightweight, and fast Next.js boilerplate with Tailwind CSS, TypeScript, Translations, ESLint, Prettier, and Husky."
+		}
+	},
+	"COMPONENTS": {
+		"FORM": {
+			"LOGIN": {
+				"TITLE": "Sign in to your account",
+				"LABEL_EMAIL": "Email",
+				"LABEL_PASSWORD": "Password",
+				"PLACEHOLDER_EMAIL": "Enter your email",
+				"PLACEHOLDER_PASSWORD": "Enter your password",
+				"BUTTON_LOGIN": "Login",
+				"BUTTON_LOGGING_IN": "Logging in…",
+				"FORGOT_PASSWORD": "Forgot password",
+				"ERROR_EMAIL": "Please enter a valid email",
+				"ERROR_PASSWORD": "Please enter a valid password",
+				"ERROR_LOGIN": "Invalid email or password"
+			}
 		}
 	}
 }
