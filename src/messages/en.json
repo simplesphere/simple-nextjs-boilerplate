@@ -1,6 +1,9 @@
 {
 	"PAGES": {
 		"HOMEPAGE": {
+			"BREADCRUMB": {
+				"TITLE": "Home"
+			},
 			"TITLE": "Next.js Boilerplate",
 			"DESCRIPTION": "An easy to use, lightweight, and fast Next.js boilerplate with Tailwind CSS, TypeScript, Translations, ESLint, Prettier, and Husky."
 		}
@@ -19,6 +22,20 @@
 				"ERROR_EMAIL": "Please enter a valid email",
 				"ERROR_PASSWORD": "Please enter a valid password",
 				"ERROR_LOGIN": "Invalid email or password"
+			}
+		},
+		"SIDEBAR": {
+			"USER": {
+				"UPGRADE_TO_PRO": "Upgrade to Pro",
+				"ACCOUNT": "Account",
+				"BILLING": "Billing",
+				"NOTIFICATIONS": "Notifications",
+				"LOGOUT": "Log out"
+			},
+			"NAVIGATION": {
+				"HOME": "Home",
+				"REPORTS": "Reports",
+				"ANALYTICS": "Analytics"
 			}
 		}
 	}

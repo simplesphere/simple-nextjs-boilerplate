@@ -7,3 +7,12 @@ export type TChildren = {
 export type TLayoutLocale = TChildren & {
 	readonly params: { readonly locale: string }
 }
+
+export type TBreadcrumbItem = {
+	href: string
+	label: string
+}
+
+export type TBreadcrumbProps = {
+	breadcrumbs?: TBreadcrumbItem[]
+}

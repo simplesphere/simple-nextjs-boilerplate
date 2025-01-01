@@ -9,7 +9,7 @@ export default tseslint.config(
 	...tseslint.configs.recommended,
 	...tseslint.configs.stylistic,
 	{
-		ignores: ['**/node_modules/**', '**/.next/', 'out/**'],
+		ignores: ['**/node_modules/**', '**/.next/', 'out/**', 'src/components/ui/**'],
 	},
 	{
 		files: ['**/*.{js,mjs,cjs,ts,tsx}'],
@@ -35,7 +35,7 @@ export default tseslint.config(
 			'@typescript-eslint/no-explicit-any': 'error',
 			'max-depth': ['warn', 4],
 			'max-lines': ['warn', { max: 400, skipBlankLines: true, skipComments: true }],
-			'complexity': ['warn', 20],
+			complexity: ['warn', 20],
 			'@next/next/no-html-link-for-pages': 'error',
 			'@typescript-eslint/consistent-type-definitions': 'off',
 			'@typescript-eslint/no-require-imports': 'off',
@@ -48,6 +48,12 @@ export default tseslint.config(
 			parserOptions: {
 				project: './tsconfig.json',
 			},
+		},
+	},
+	{
+		files: ['src/components/ui/**/*.{ts,tsx}'],
+		rules: {
+			'max-lines': 'off',
 		},
 	},
 )

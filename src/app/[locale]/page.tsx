@@ -1,25 +1,22 @@
-import { useTranslations } from 'next-intl'
+import { BreadcrumbPrimary } from '@/components/layout/breadcrumb'
+import { AppSidebar } from '@/components/layout/sidebar/sidebar'
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 
-export default function Home() {
-	const t = useTranslations('PAGES.HOMEPAGE')
-
+export default function LayoutDashboard() {
 	return (
-		<section className="h-full py-12" id="intro">
-			<div className="container">
-				<h1 className="text-3xl mb-3 font-bold text-slate-800">{t('TITLE')}</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non odio nunc.
-					Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris hendrerit et quam at
-					iaculis. In vel diam vel nibh rutrum interdum eu nec tortor. Proin vel arcu viverra,
-					vehicula orci nec, tincidunt justo. Mauris vel sapien et felis venenatis rhoncus id sed
-					nisl.
-				</p>
-				<p>
-					Sed quis turpis pharetra nunc pellentesque interdum. Vivamus semper quis dolor vestibulum
-					suscipit. Cras non ante at nulla gravida lacinia et sed leo. Donec cursus at turpis non
-					malesuada.
-				</p>
-			</div>
-		</section>
+		<SidebarProvider>
+			<AppSidebar />
+			<SidebarInset>
+				<BreadcrumbPrimary />
+				<div className="flex flex-col min-h-screen gap-4 p-4">
+					<div className="grid auto-rows-min gap-4 md:grid-cols-3">
+						<div className="aspect-video rounded-xl bg-slate-200" />
+						<div className="aspect-video rounded-xl bg-slate-200" />
+						<div className="aspect-video rounded-xl bg-slate-200" />
+					</div>
+					<div className="flex-1 rounded-xl bg-slate-200" />
+				</div>
+			</SidebarInset>
+		</SidebarProvider>
 	)
 }
