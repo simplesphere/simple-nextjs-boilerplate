@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from 'next-intl'
 
 const satoshi = localFont({
 	src: '../../assets/fonts/satoshi.woff2',
-	variable: '--font-satoshi',
+	variable: '--font-satoshi'
 })
 
 export async function generateMetadata({ params }: Readonly<TLayoutLocale>): Promise<Metadata> {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Readonly<TLayoutLocale>): Pro
 
 	return {
 		title: t('TITLE'),
-		description: t('DESCRIPTION'),
+		description: t('DESCRIPTION')
 	}
 }
 
@@ -26,7 +26,7 @@ export default async function RootLayout({ children, params }: Readonly<TLayoutL
 
 	return (
 		<html lang={locale}>
-			<body className={`${satoshi.variable} font-sans text-slate-600`}>
+			<body className={`${satoshi.variable} font-sans`}>
 				<NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
 			</body>
 		</html>

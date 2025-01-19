@@ -14,15 +14,15 @@ export async function updateSession(request: NextRequest, response: NextResponse
 				setAll(cookiesToSet) {
 					cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
 					cookiesToSet.forEach(({ name, value, options }) =>
-						response.cookies.set(name, value, options),
+						response.cookies.set(name, value, options)
 					)
-				},
-			},
-		},
+				}
+			}
+		}
 	)
 
 	const {
-		data: { user },
+		data: { user }
 	} = await supabase.auth.getUser()
 
 	if (!user && !WHITELISTPATHS.includes(request.nextUrl.pathname)) {

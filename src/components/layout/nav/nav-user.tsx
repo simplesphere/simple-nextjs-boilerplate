@@ -8,13 +8,13 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
-	DropdownMenuTrigger,
+	DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	useSidebar,
+	useSidebar
 } from '@/components/ui/sidebar'
 import { formatToInitials } from '@/utils'
 
@@ -69,7 +69,7 @@ export function NavUser({ data }: TNavUser) {
 					>
 						{data.user.navigation.map((item) => (
 							<Fragment key={item.name}>
-								<DropdownMenuItem key={item.name} className="text-slate-500">
+								<DropdownMenuItem key={item.name} className="text-slate-600">
 									{item.icon && <item.icon className="mr-2 h-4 w-4" />}
 									{item.name}
 								</DropdownMenuItem>

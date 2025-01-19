@@ -6,6 +6,61 @@
 			},
 			"TITLE": "Next.js Boilerplate",
 			"DESCRIPTION": "An easy to use, lightweight, and fast Next.js boilerplate with Tailwind CSS, TypeScript, Translations, ESLint, Prettier, and Husky."
+		},
+		"DASHBOARD": {
+			"BREADCRUMB": {
+				"TITLE": "Dashboard"
+			},
+			"TITLE": "Dashboard",
+			"STATS": {
+				"TOTAL_REVENUE": "Total Revenue",
+				"NEW_CUSTOMERS": "New Customers",
+				"TOTAL_SALES": "Total Sales",
+				"PERCENT_CHANGE": "{percentage} vs last month"
+			},
+			"TABLE": {
+				"TITLE": "Recent Customers",
+				"HEADER": {
+					"ID": "ID",
+					"NAME": "Name",
+					"EMAIL": "Email",
+					"STATUS": "Status",
+					"DATE_REGISTERED": "Date"
+				}
+			}
+		},
+		"REPORTS": {
+			"BREADCRUMB": {
+				"TITLE": "Reports"
+			},
+			"TITLE": "Reports",
+			"FILTER_PLACEHOLDER": "Filter emails...",
+			"COLUMNS_BUTTON": "Columns",
+			"NO_RESULTS": "No results.",
+			"ROWS_SELECTED": "{selected} of {total} row(s) selected.",
+			"PREVIOUS": "Previous",
+			"NEXT": "Next",
+			"STATUS": "Status",
+			"EMAIL": "Email",
+			"AMOUNT": "Amount",
+			"OPEN_MENU": "Open Menu",
+			"ACTIONS": "Actions",
+			"COPY_PAYMENT_ID": "Copy Payment ID",
+			"VIEW_CUSTOMER": "View Customer",
+			"VIEW_PAYMENT_DETAILS": "View Payment Details"
+		},
+		"ANALYTICS": {
+			"BREADCRUMB": {
+				"TITLE": "Analytics"
+			},
+			"TITLE": "Analytics",
+			"TOTAL_REVENUE": "Total Revenue",
+			"SUBSCRIPTIONS": "Subscriptions",
+			"ACTIVE_USERS": "Active Users",
+			"TOP_PRODUCTS": "Top Products",
+			"PRODUCT_NAME": "Name",
+			"PRODUCT_SALES": "Sales",
+			"PRODUCT_REVENUE": "Revenue"
 		}
 	},
 	"COMPONENTS": {

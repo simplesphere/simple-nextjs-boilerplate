@@ -14,52 +14,51 @@ import {
 	FormField,
 	FormItem,
 	FormLabel,
-	FormMessage,
+	FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Spinner } from '@/components/ui/spinner'
 import useToggleVisibility from '@/hooks/useToggleVisibility'
+import { loginSchema } from '@/validations/form-login'
+import { login } from '@/actions/auth'
 
 export default function FormLogin() {
 	const t = useTranslations('COMPONENTS.FORM.LOGIN')
 	const [isPasswordVisible, togglePasswordVisibility] = useToggleVisibility()
 	const [isLoading, setIsLoading] = useState(false)
+	const [error, setError] = useState<
+		string | z.typeToFlattenedError<{ email: string; password: string }, string> | undefined
+	>(undefined)
 
-	const formSchema = z.object({
-		email: z
-			.string()
-			.trim()
-			.email({
-				message: t('ERROR_EMAIL'),
-			}),
-		password: z.string().min(1, {
-			message: t('ERROR_PASSWORD'),
-		}),
-	})
-
-	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: zodResolver(formSchema),
+	const form = useForm<z.infer<typeof loginSchema>>({
+		resolver: zodResolver(loginSchema),
 		defaultValues: {
 			email: '',
-			password: '',
-		},
+			password: ''
+		}
 	})
 
 	const defaultClasses = {
 		inputIconClasses: 'h-4 w-4 absolute text-gray-400 left-3 top-1/2 transform -translate-y-1/2',
 		inputClasses: 'pl-10 bg-slate-50',
-		inputEyeClasses: `h-4 w-4 absolute text-gray-300 right-3 top-1/2 transform -translate-y-1/2 hover:text-sky-600 flex-shrink-0`,
+		inputEyeClasses: `h-4 w-4 absolute text-gray-300 right-3 top-1/2 transform -translate-y-1/2 hover:text-sky-600 flex-shrink-0`
 	}
 
-	async function onSubmit(values: z.infer<typeof formSchema>) {
+	async function onSubmit(values: z.infer<typeof loginSchema>) {
 		const formData = new FormData()
 		formData.append('email', values.email)
 		formData.append('password', values.password)
 
 		try {
 			setIsLoading(true)
+			const result = await login(formData)
+
+			if (result && !result.success) {
+				setError(result.error)
+				form.reset()
+			}
 		} catch (error) {
-			console.error(error)
+			console.warn(error)
 		} finally {
 			setIsLoading(false)
 		}
@@ -147,6 +146,7 @@ export default function FormLogin() {
 					</Link>
 				</div>
 			</form>
+			{error && <div className="mt-3 p-3 text-red-600 bg-red-50 rounded-md text-sm">{error}</div>}
 		</Form>
 	)
 }

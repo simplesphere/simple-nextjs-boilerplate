@@ -1,24 +1,87 @@
 {
 	"PAGES": {
 		"HOMEPAGE": {
+			"BREADCRUMB": {
+				"TITLE": "Accueil"
+			},
 			"TITLE": "Next.js Boilerplate",
-			"DESCRIPTION": "Un modèle Next.js facile à utiliser, léger et rapide avec Tailwind CSS, TypeScript, Traductions, ESLint, Prettier et Husky."
+			"DESCRIPTION": "Un boilerplate Next.js facile à utiliser, léger et rapide avec Tailwind CSS, TypeScript, Traductions, ESLint, Prettier et Husky."
+		},
+		"DASHBOARD": {
+			"TITLE": "Tableau de bord",
+			"STATS": {
+				"TOTAL_REVENUE": "Revenu total",
+				"NEW_CUSTOMERS": "Nouveaux clients",
+				"TOTAL_SALES": "Ventes totales",
+				"PERCENT_CHANGE": "{percentage} par rapport au mois dernier"
+			},
+			"TABLE": {
+				"TITLE": "Clients récents",
+				"HEADER": {
+					"ID": "ID",
+					"NAME": "Nom",
+					"EMAIL": "E-mail",
+					"STATUS": "Statut",
+					"DATE_REGISTERED": "Date d'inscription"
+				}
+			}
+		},
+		"REPORTS": {
+			"TITLE": "Rapports",
+			"FILTER_PLACEHOLDER": "Filtrer les e-mails...",
+			"COLUMNS_BUTTON": "Colonnes",
+			"NO_RESULTS": "Aucun résultat.",
+			"ROWS_SELECTED": "{selected} sur {total} ligne(s) sélectionnée(s).",
+			"PREVIOUS": "Précédent",
+			"NEXT": "Suivant",
+			"STATUS": "Statut",
+			"EMAIL": "E-mail",
+			"AMOUNT": "Montant",
+			"OPEN_MENU": "Ouvrir le menu",
+			"ACTIONS": "Actions",
+			"COPY_PAYMENT_ID": "Copier l'ID de paiement",
+			"VIEW_CUSTOMER": "Voir le client",
+			"VIEW_PAYMENT_DETAILS": "Voir les détails du paiement"
+		},
+		"ANALYTICS": {
+			"TITLE": "Analyses",
+			"TOTAL_REVENUE": "Revenu total",
+			"SUBSCRIPTIONS": "Abonnements",
+			"ACTIVE_USERS": "Utilisateurs actifs",
+			"TOP_PRODUCTS": "Meilleurs produits",
+			"PRODUCT_NAME": "Nom",
+			"PRODUCT_SALES": "Ventes",
+			"PRODUCT_REVENUE": "Revenu"
 		}
 	},
 	"COMPONENTS": {
 		"FORM": {
 			"LOGIN": {
 				"TITLE": "Connectez-vous à votre compte",
-				"LABEL_EMAIL": "Email",
+				"LABEL_EMAIL": "E-mail",
 				"LABEL_PASSWORD": "Mot de passe",
-				"PLACEHOLDER_EMAIL": "Entrez votre email",
+				"PLACEHOLDER_EMAIL": "Entrez votre e-mail",
 				"PLACEHOLDER_PASSWORD": "Entrez votre mot de passe",
-				"BUTTON_LOGIN": "Se connecter",
+				"BUTTON_LOGIN": "Connexion",
 				"BUTTON_LOGGING_IN": "Connexion en cours…",
 				"FORGOT_PASSWORD": "Mot de passe oublié",
-				"ERROR_EMAIL": "Veuillez entrer un email valide",
+				"ERROR_EMAIL": "Veuillez entrer un e-mail valide",
 				"ERROR_PASSWORD": "Veuillez entrer un mot de passe valide",
-				"ERROR_LOGIN": "Email ou mot de passe invalide"
+				"ERROR_LOGIN": "E-mail ou mot de passe invalide"
+			}
+		},
+		"SIDEBAR": {
+			"USER": {
+				"UPGRADE_TO_PRO": "Passer à Pro",
+				"ACCOUNT": "Compte",
+				"BILLING": "Facturation",
+				"NOTIFICATIONS": "Notifications",
+				"LOGOUT": "Déconnexion"
+			},
+			"NAVIGATION": {
+				"HOME": "Accueil",
+				"REPORTS": "Rapports",
+				"ANALYTICS": "Analyses"
 			}
 		}
 	}

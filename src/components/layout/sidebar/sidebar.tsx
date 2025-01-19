@@ -1,6 +1,5 @@
 'use client'
 
-import * as React from 'react'
 import {
 	BadgeCheck,
 	Bell,
@@ -9,7 +8,7 @@ import {
 	HomeIcon,
 	LogOut,
 	PieChart,
-	Sparkles,
+	Sparkles
 } from 'lucide-react'
 
 import {
@@ -17,80 +16,86 @@ import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
-	SidebarRail,
+	SidebarRail
 } from '@/components/ui/sidebar'
 import { NavUser } from '@/components/layout/nav/nav-user'
 import { NavPrimary } from '@/components/layout/nav/nav-primary'
 import { Logo } from '@/components/layout/logo'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const sidebarData = {
 	user: {
 		name: 'John Doe',
 		email: 'johndoe@johndoe.com',
-		avatar: '/avatars/shadcn.jpg',
+		avatar: '/avatar.png',
 		navigation: [
 			{
 				name: 'UPGRADE_TO_PRO',
 				url: '#',
 				icon: Sparkles,
-				separator: true,
+				separator: true
 			},
 			{
 				name: 'ACCOUNT',
 				url: '#',
-				icon: BadgeCheck,
+				icon: BadgeCheck
 			},
 			{
 				name: 'BILLING',
 				url: '#',
-				icon: CreditCard,
+				icon: CreditCard
 			},
 			{
 				name: 'NOTIFICATIONS',
 				url: '#',
 				icon: Bell,
-				separator: true,
+				separator: true
 			},
 			{
 				name: 'LOGOUT',
 				url: '#',
-				icon: LogOut,
-			},
-		],
+				icon: LogOut
+			}
+		]
 	},
 	navigation: [
 		{
 			name: 'HOME',
-			url: '#',
-			icon: HomeIcon,
+			url: '/',
+			icon: HomeIcon
 		},
 		{
 			name: 'REPORTS',
-			url: '#',
-			icon: FileText,
+			url: '/reports',
+			icon: FileText
 		},
 		{
 			name: 'ANALYTICS',
-			url: '#',
-			icon: PieChart,
-		},
-	],
+			url: '/analytics',
+			icon: PieChart
+		}
+	]
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	const t = useTranslations('COMPONENTS.SIDEBAR')
+	const pathname = usePathname()
 
 	return (
 		<Sidebar collapsible="icon" {...props}>
 			<SidebarHeader className="p-4">
-				<Logo />
+				<Link href="/">
+					<Logo />
+				</Link>
 			</SidebarHeader>
 			<SidebarContent>
 				<NavPrimary
+					pathname={pathname}
 					navigation={sidebarData.navigation.map((item) => ({
 						...item,
-						name: t(`NAVIGATION.${item.name}`),
+						name: t(`NAVIGATION.${item.name}`)
 					}))}
 				/>
 			</SidebarContent>
@@ -101,9 +106,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 							...sidebarData.user,
 							navigation: sidebarData.user.navigation.map((item) => ({
 								...item,
-								name: t(`USER.${item.name}`),
-							})),
-						},
+								name: t(`USER.${item.name}`)
+							}))
+						}
 					}}
 				/>
 			</SidebarFooter>
